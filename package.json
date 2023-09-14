@@ -1,0 +1,19 @@
+{
+  "name": "law-adviser-backend",
+  "version": "1.0.0",
+  "description": "This is SIH backend project of Law adviser portal.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChatrolaMit/Law-Adviser-Backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChatrolaMit/Law-Adviser-Backend/issues"
+  },
+  "homepage": "https://github.com/ChatrolaMit/Law-Adviser-Backend#readme"
+}

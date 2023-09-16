@@ -4,11 +4,7 @@
   "description": "This is SIH backend project of Law adviser portal.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --detectOpenHandles",
-    "test-watch": "jest --watch",
-    "watch": "nodemon src/server.js",
-    "start": "npm src/server.js",
-    "cluster": "pm2 start src/server.js - i max"
+    
   },
   "repository": {
     "type": "git",

@@ -2,8 +2,8 @@
   "name": "law-adviser-backend",
   "version": "1.0.0",
   "description": "This is SIH backend project of Law adviser portal.",
-  "main": "server.js",
   "scripts": {
+    "start":"node src/server.js",
     "test": "jest --detectOpenHandles"
   },
   "repository": {

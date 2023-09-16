@@ -2,9 +2,9 @@
   "name": "law-adviser-backend",
   "version": "1.0.0",
   "description": "This is SIH backend project of Law adviser portal.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    
+    "start":"node server.js"
   },
   "repository": {
     "type": "git",

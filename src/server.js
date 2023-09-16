@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 5000
 
 require('dotenv').config()
 
-const server = http.createServer(app) 
+// const server = http.createServer(app) 
 
 async function startServer(){
     await mongoConnect()

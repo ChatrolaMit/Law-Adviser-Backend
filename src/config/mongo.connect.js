@@ -1,5 +1,7 @@
 const mongo = require("mongoose")
-const MONGO_URL = "mongodb://127.0.0.1:27017/law-adviser"
+require("dotenv").config()
+
+const MONGO_URL = process.env.MONGO_URL
 
 mongo.connection.once('open', ()=>{
     console.log("Mongo Connection is ready")

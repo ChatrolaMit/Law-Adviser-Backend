@@ -1,8 +1,9 @@
 const http = require('http')
-
 const app = require('./app')
 const { mongoConnect } = require('./config/mongo.connect')
 const PORT = process.env.PORT || 5000
+
+require('dotenv').config()
 
 const server = http.createServer(app) 
 

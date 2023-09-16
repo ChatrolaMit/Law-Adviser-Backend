@@ -1,99 +1,4 @@
-const mongoose = require('mongoose')
-
-const advocateProfile = new mongoose.Schema({
-    profileIcon:{
-        type:String 
-    },
-    name:{
-        type :String,
-        required:true
-    },
-    designation:{
-        type:String,
-        required:true
-    },
-    location:{
-        type:String,
-    },
-    workingFrom:{
-        type:Date
-    },
-    userRating:{
-        type:Number,
-        
-    },
-    verified:{
-        type:Boolean,
-        default:false,
-        required:true,
-    },
-    hallOfFrames:[{
-        type:String,
-    }],
-    badges:[{
-        type:String,
-
-    }],
-    languages:[{
-        type:String,
-    }],
-    practiceArea:[{
-        type:String 
-    }],
-    description:{
-        type:String 
-    },
-    contactNumber:{
-        type:Number,
-    },
-    emailId:{
-        type:String,
-    },
-    enrollmentNumber:{
-        type:String,
-        required:true
-    },
-    gender:{
-        typr:String,
-        require:true
-    },
-    publicQuestionReply:[{
-        type:String
-    }],
-    courts:[{
-        type:String,
-        required:true,
-    }],
-    blogs:[{
-        type:String
-    }],
-    articals:[{
-        type:String,
-    }],
-    videos:[{
-        type:String,
-    }],
-    reviews:[{
-        personName:{
-            type:String,
-            required:true
-        },
-        rating:{
-            type:Number,
-            required:true,
-        },
-        date:{
-            type:Date,
-            required:true
-        },
-        message:{
-            type:String,
-            required:true
-        }
-    }],
-})
-
-const advocate = mongoose.model('advocateProfile',advocateProfile)
+const advocate = require('./mongo')
 
 const addAdvocate = async () =>{
     const obj = {
@@ -113,10 +18,11 @@ const addAdvocate = async () =>{
         emailId:"alivehitman047@gmail.com",
         enrollmentNumber:"200170942454",
         gender:"male",
+        ratedBy:5,
         publicQuestionReply:["12","13","14"],
         courts:["ahmedabad court of Justice", "Gujarat High Court", "Supreme Court of India"],
         blogs:["https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png","https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png","https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png"],
-        articals:["https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png","https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png","https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png"],
+        articles:["https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png","https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png","https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png"],
         videos:["https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png","https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png","https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png"],
         reviews:[
             {
@@ -140,10 +46,24 @@ const addAdvocate = async () =>{
         ]
         
     } 
-    result = await advocate.updateOne(
+    const result = await advocate.updateOne(
         { enrollmentNumber: obj.enrollmentNumber },
         obj,
         { upsert: true }
     );
 
+    return JSON.stringify(result)
+
+}
+
+const getAllAdvocates = async () =>{
+    const result = await advocate.find({}) 
+    return JSON.stringify(result)
+}
+
+
+
+module.exports = {
+    addAdvocate,
+    getAllAdvocates
 }

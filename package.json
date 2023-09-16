@@ -4,8 +4,7 @@
   "description": "This is SIH backend project of Law adviser portal.",
   "scripts": {
     "start":"node src/server.js",
-    "test": "jest --detectOpenHandles",
-    "deploy":"nodemon src/server.js"
+    "test": "jest --detectOpenHandles"
   },
   "repository": {
     "type": "git",

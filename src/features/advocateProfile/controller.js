@@ -1,4 +1,4 @@
-const {addAdvocate, getAllAdvocates} = require('./model')
+const {addAdvocate, getAllAdvocates,getAdvocate} = require('./model')
 
 const httpAddAdvocate =async (req,res)=>{
     console.log(req.body)
@@ -9,7 +9,12 @@ const httpGetAdvocates = async (req,res)=>{
     res.send(await getAllAdvocates() )
 }
 
+const httpGetAdvocateById = async(req,res) =>{
+    res.send(await getAdvocate(req.params.id))
+}
+
 module.exports = {
     httpAddAdvocate,
-    httpGetAdvocates
+    httpGetAdvocates,
+    httpGetAdvocateById
 }

@@ -7,7 +7,7 @@ const addAdvocate = async (obj) =>{
         obj,
         { upsert: true }
     );
-
+     
     return JSON.stringify(result)
 
 }
@@ -31,11 +31,19 @@ const getAllAdvocates = async () => {
   
     return JSON.stringify(result);
   };
+
+  const getAdvocate = async (id) =>{
+    console.log(id)
+    const result = await advocate.findOne({_id:id}).lean()
+    return JSON.stringify(result)
+  }
+
   
 
 
 
 module.exports = {
     addAdvocate,
-    getAllAdvocates
+    getAllAdvocates,
+    getAdvocate
 }

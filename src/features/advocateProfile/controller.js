@@ -1,7 +1,8 @@
 const {addAdvocate, getAllAdvocates} = require('./model')
 
 const httpAddAdvocate =async (req,res)=>{
-    res.send(await addAdvocate())
+    console.log(req.body)
+    res.send(await addAdvocate(req.body))
 }
 
 const httpGetAdvocates = async (req,res)=>{

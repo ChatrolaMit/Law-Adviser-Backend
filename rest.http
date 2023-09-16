@@ -1,1 +1,69 @@
-GET http://localhost:5000/
+GET http://localhost:5000/law-adviser/
+
+### Register Lawyer
+POST http://localhost:5000/law-adviser/registeradvocate
+Content-Type: application/json
+
+{
+  "name": "Alive047",
+  "designation": "Advocate",
+  "location": "Amreli",
+  "workingFrom": "2022-01-01T00:00:00.000Z",
+  "userRating": 4.5,
+  "verified": true,
+  "hallOfFrames": [
+    "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png",
+    "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png",
+    "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png"
+  ],
+  "badges": [
+    "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png",
+    "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png",
+    "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png"
+  ],
+  "languages": ["hindi", "english", "gujarati"],
+  "practiceArea": ["criminal cases", "divorce and marriage", "accident"],
+  "description": "I am a lawyer since 2003 and I have 20+ years of experience. I have worked in the high court.",
+  "contactNumber": 98896354,
+  "emailId": "alivehitman047@gmail.com",
+  "enrollmentNumber": "562146",
+  "gender": "female",
+  "ratedBy": 5,
+  "publicQuestionReply": ["12", "13", "14"],
+  "courts": ["Ahmedabad Court of Justice", "Gujarat High Court", "Supreme Court of India"],
+  "blogs": [
+    "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png",
+    "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png",
+    "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png"
+  ],
+  "articles": [
+    "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png",
+    "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png",
+    "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png"
+  ],
+  "videos": [
+    "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png",
+    "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png",
+    "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png"
+  ],
+  "reviews": [
+    {
+      "personName": "Hitman",
+      "rating": "4",
+      "date": "2021-02-21T00:00:00.000Z",
+      "message": "Advocate is very kind and very helpful"
+    },
+    {
+      "personName": "Hitman",
+      "rating": "4",
+      "date": "2021-02-21T00:00:00.000Z",
+      "message": "Advocate is very kind and very helpful"
+    },
+    {
+      "personName": "Hitman",
+      "rating": "4",
+      "date": "2021-02-21T00:00:00.000Z",
+      "message": "Advocate is very kind and very helpful"
+    }
+  ]
+}

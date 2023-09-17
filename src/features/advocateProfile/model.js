@@ -12,17 +12,13 @@ const addAdvocate = async (obj) =>{
 
 }
 
-const getAllAdvocates = async () => {
+const getAllAdvocates = async (page) => {
     const result = await advocate.find({}).lean();
   
     for (let obj of result) {
-      delete obj.hallOfFrames;
-      delete obj.badges;
       delete obj.description;
       delete obj.emailId;
-      delete obj.gender;
       delete obj.publicQuestionReply;
-      delete obj.courts;
       delete obj.blogs;
       delete obj.articles;
       delete obj.videos;

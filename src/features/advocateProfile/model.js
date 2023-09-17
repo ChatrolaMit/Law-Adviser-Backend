@@ -36,8 +36,6 @@ const getAllAdvocates = async (page) => {
 
   
 
-
-
 module.exports = {
     addAdvocate,
     getAllAdvocates,

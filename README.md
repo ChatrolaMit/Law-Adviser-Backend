@@ -12,3 +12,11 @@ sudo docker run -it law-adviser
 Map your ports to 5000  
 sudo docker build -t law-adviser .
 
+<!-- schema for blogs -->
+blog id 
+title
+advocate profile
+date
+like and dislike
+discryption
+image

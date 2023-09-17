@@ -1,5 +1,3 @@
-const express = require("express")
-
 const {addBlog, getAllBlogs} = require('./model')
 
 const httpAddBlog = async (req,res) =>{

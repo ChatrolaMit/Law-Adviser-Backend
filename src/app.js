@@ -5,6 +5,7 @@ const qaRouter = require('./features/qa/routes')
 const morgan = require('morgan');
 const { mongoConnect } = require('./config/mongo.connect');
 const blogs = require('./features/blogs/router');
+const articals = require('./features/articals/router');
 
 const app = express()
 const PORT = process.env.PORT || 5000
@@ -16,6 +17,7 @@ app.use('/law-adviser',advocate)
 app.use('/',qaRouter)
 
 app.use('/blogs',blogs)
+app.use('/articles',articals)
 
 
 app.get('/' , (req , res)=>{

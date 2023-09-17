@@ -10,7 +10,7 @@ const addBlog = async(obj) =>{
 }
 
 const getAllBlogs = async() =>{
-    const result = await blogs.find({}).limit(10).lean()
+    const result = await blogs.find({}).lean()
 
     return result
 }

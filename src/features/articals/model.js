@@ -1,11 +1,22 @@
 const articals = require('./mongo')
+const advocate = require('../advocateProfile/mongo')
 
 const addArtical = async(obj) =>{
     const result = await articals.updateOne({title:obj.title},
         obj,
         {upsert:true})
     
-    return result
+    if (result.upsertedId) {
+        for(let key of obj.colleboraters){
+            console.log(key)
+            const updateAdvocate = await advocate.updateOne(
+                { _id: key }, 
+                { $addToSet: { articles: result.upsertedId } })
+        }
+        return result
+    } else {
+        return result
+    }
 
 }
 

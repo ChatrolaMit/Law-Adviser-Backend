@@ -20,3 +20,13 @@ date
 like and dislike
 discryption
 image
+
+<!-- schema for qna -->
+area of law / categories --- crime , civil 
+city
+subject 
+question +
+ans  :  advocate id +
+        upvote + 
+        downvote +
+        ans   +

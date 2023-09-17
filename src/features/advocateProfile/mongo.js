@@ -21,7 +21,7 @@ const advocateProfileSchema = new mongoose.Schema({
     userRating: {
         type: Number,
         min: 0,
-        max: 5, // Adjust the range as needed
+        max: 5, 
     },
     verified: {
         type: Boolean,
@@ -44,7 +44,7 @@ const advocateProfileSchema = new mongoose.Schema({
         type: String,
     },
     contactNumber: {
-        type: String, // Changed to String
+        type: String, 
     },
     emailId: {
         type: String,
@@ -54,7 +54,7 @@ const advocateProfileSchema = new mongoose.Schema({
         required: true,
     },
     gender: {
-        type: String, // Fixed the typo here
+        type: String, 
         required: true,
     },
     publicQuestionReply: [{
@@ -67,12 +67,16 @@ const advocateProfileSchema = new mongoose.Schema({
     blogs: [{
         type: String,
     }],
-    articles: [{ // Fixed the typo "articals" to "articles"
+    articles: [{ 
         type: String,
     }],
     videos: [{
         type: String,
     }],
+    password:{
+        type:String,
+        required:true
+    },
     ratedBy:{
         type:Number,
         required:true,
@@ -86,7 +90,7 @@ const advocateProfileSchema = new mongoose.Schema({
         rating: {
             type: Number,
             required: true,
-            min: 0, // Adjust the range as needed
+            min: 0, 
             max: 5,
         },
         date: {

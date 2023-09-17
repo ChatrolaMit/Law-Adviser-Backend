@@ -1,21 +1,30 @@
 const blogs = require('./mongo')
+const advocate = require('../advocateProfile/mongo')
 
-const addBlog = async(obj) =>{
-    const result = await blogs.updateOne({title:obj.title},
+const addBlog = async (obj) => {
+    const result = await blogs.updateOne({ title: obj.title },
         obj,
-        {upsert:true})
-    
-    return result
+        { upsert: true })
+
+    if (result.upsertedId) {
+        const updateAdvocate = await advocate.updateOne(
+            { _id: obj.advocate }, 
+            { $addToSet: { blogs: result.upsertedId } })
+        return updateAdvocate
+    } else {
+        return result
+    }
+
 
 }
 
-const getAllBlogs = async() =>{
+const getAllBlogs = async () => {
     const result = await blogs.find({}).lean()
 
     return result
 }
 
-module.exports ={
+module.exports = {
     addBlog,
     getAllBlogs
 }

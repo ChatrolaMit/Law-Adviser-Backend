@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require("cors")
 const path = require('path')
 const advocate = require('./features/advocateProfile/routes');
+const qaRouter = require('./features/qa/routes')
 const morgan = require('morgan');
 const { mongoConnect } = require('./config/mongo.connect')
 
@@ -12,6 +13,8 @@ app.use(express.json())
 app.use(cors())
 
 app.use('/law-adviser',advocate)
+app.use('/',qaRouter)
+
 
 app.get('/' , (req , res)=>{
     res.status(200).send("hello World")

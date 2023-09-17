@@ -67,3 +67,33 @@ Content-Type: application/json
     }
   ]
 }
+
+### get all qa
+GET http://localhost:5000/qa/
+
+### post question
+POST http://localhost:5000/qa/post
+Content-Type: application/json
+
+{
+  "user":"1234",
+  "que":"hello i stole a car ehat should i do now??"
+}
+
+
+### post answer
+POST http://localhost:5000/qa/650696a709c33126516c2317
+Content-Type: application/json
+
+{
+  "user":"4563",
+   "ans":"you can surrender to police"
+}
+
+### upvote answer
+POST http://localhost:5000/qa/up/650696a709c33126516c2317/6506978201b343b75cd3253e
+
+
+### downvote answer
+POST http://localhost:5000/qa/down/650696a709c33126516c2317/6506978201b343b75cd3253e
+

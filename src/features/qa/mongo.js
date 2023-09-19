@@ -9,7 +9,7 @@ const qaSchema = new mongoose.Schema({
         type:String,
         required:true 
     },
-    user: {
+    userId: {
         type: String,
         required: true,
     },
@@ -18,7 +18,7 @@ const qaSchema = new mongoose.Schema({
         required: true,
     },
     answers:[ {
-        user:{
+        advocateId:{
             type: String,
             required: true,  
         },

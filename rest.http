@@ -31,7 +31,7 @@ Content-Type: application/json
   "ratedBy": 5,
   "publicQuestionReply": ["12", "13", "14"],
   "courts": ["Ahmedabad Court of Justice", "Gujarat High Court", "Supreme Court of India"],
-  "blogs": [
+  "blogs": [ 
     "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png",
     "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png",
     "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Bitly-512.png"
